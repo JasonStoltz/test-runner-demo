@@ -1,11 +1,12 @@
 import {Map, List} from 'immutable';
-import {SET_STATUS} from './actions';
+import {SET_STATUS, SET_TESTS} from './actions';
 
 const initialState = new Map({
   tests: new List()
 });
 
 export default function(state = initialState, action) {
+
   switch (action.type) {
     case SET_STATUS:
       return state.update('tests', tests => {
@@ -17,6 +18,10 @@ export default function(state = initialState, action) {
           return t;
         })
       });
+
+    case SET_TESTS:
+      return state.set('tests', action.tests);
+
     default:
       return state;
   }
