@@ -8,7 +8,7 @@ export const FAILED = 'Failed';
 export const PASSED = 'Passed';
 
 /*
- Interface for interacting with our theoretically external
+ Interface for interacting with our theoretically external data source
  */
 export default {
   all() {

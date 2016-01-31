@@ -6,10 +6,6 @@ export default class Tests extends PureComponent {
     tests: React.PropTypes.object.isRequired
   };
 
-  constructor() {
-    super();
-  }
-
   render() {
     const {tests} = this.props;
 
