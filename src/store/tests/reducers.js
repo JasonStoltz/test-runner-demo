@@ -19,6 +19,10 @@ export default function(state = initialState, action) {
 
   switch (action.type) {
     case SET_STATUS:
+      if ([Test.PASSED, Test.FAILED, Test.RUNNING, Test.NOT_STARTED_YET].indexOf(action.status) < 0) {
+        return state;
+      }
+
       state = state.update('tests', tests => {
         return tests.map(t => {
           if (t.get('id') === action.id) {
