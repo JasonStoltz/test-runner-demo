@@ -5,9 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
-    "scripts": {
-      "test": "mocha --compilers js:babel-register test/store/tests/reducers.js"
-    }
+    "test": "mocha --compilers js:babel-register test/store/tests/reducers.js"
   },
   "repository": {
     "type": "git",
